@@ -1,9 +1,13 @@
-version:'3'
+version: '3'
+name : fwd-group-3
 services:
-    app:
-      build: .
-      volumen:
-        -.:/usr/sc/app
-        container_name:express-api
+  app:
+    build: .
+    restart: always
+    ports:
+      - 8081:3000
+    volumes: 
+      - .:/usr/src/app 
+    container_name: express-api   
 
 #network 
